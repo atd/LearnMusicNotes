@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu">Choose a game:</string>
+    <string name="app_name">Learn Music Notes</string>
+    <string name="mintest">One Minute Test</string>
+    <string name="training">Training</string>
+    <string name="game">Game</string>
+    <string name="re">re</string>
+    <string name="si">si</string>
+    <string name="mi">mi</string>
+    <string name="sol">sol</string>
+    <string name="don">do</string>
+    <string name="don_tag">don</string>
+    <string name="fa">fa</string>
+    <string name="la">la</string>
+    <string name="endgame">End Game</string>
+    <string name="quit">Quit</string>
+    
+</resources>
