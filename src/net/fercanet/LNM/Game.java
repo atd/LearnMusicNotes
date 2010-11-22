@@ -40,6 +40,7 @@ public class Game extends Activity {
 	int correct, fail;
 	boolean omt;
 	long elapsedtime;
+	int countdown;
 	Chronometer chrono;
 	String currenttime;
 	
@@ -53,11 +54,12 @@ public class Game extends Activity {
         	correct = savedInstanceState.getInt("correct");
         	fail = savedInstanceState.getInt("fail");
         	elapsedtime = savedInstanceState.getLong("elapsedtime");
+        	countdown = savedInstanceState.getInt("countdown");
         }
         else {
         	correct = 0;
         	fail = 0;
-        	if (omt==true) {elapsedtime = 61;}
+        	if (omt==true) {countdown = 61;}
         	else {elapsedtime = SystemClock.elapsedRealtime();}
         }
         clickListenersInitialization();
@@ -168,9 +170,9 @@ public class Game extends Activity {
     	@Override
 		public void onChronometerTick(Chronometer chronometer) { 		
     		if (omt==true){
-    			elapsedtime--;
-    			chronometer.setText(String.valueOf(elapsedtime));
-    			if (elapsedtime<=0) {
+    			countdown--;
+    			chronometer.setText(String.valueOf(countdown));
+    			if (countdown<=0) {
     				chrono.stop();
     				showEndDialog();
     			}
@@ -192,6 +194,7 @@ public class Game extends Activity {
       outState.putInt("correct", correct);
       outState.putInt("fail", fail);
       outState.putLong("elapsedtime", chrono.getBase());
+      outState.putInt("countdown", countdown);
     }
 
     
