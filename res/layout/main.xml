@@ -34,6 +34,15 @@
 		android:background="@drawable/custom_button"
 		android:layout_margin="3dp"	
 	/>	
+	<Button
+		android:id="@+id/hof"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/hof"
+		android:layout_below="@+id/training"
+		android:background="@drawable/custom_button"
+		android:layout_margin="3dp"	
+	/>	
 	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	    android:orientation="horizontal"
 	    android:layout_width="wrap_content"

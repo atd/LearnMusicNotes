@@ -37,6 +37,8 @@ public class Menu extends Activity {
         mintest.setOnClickListener(ClickListener);
         Button training = (Button) findViewById(R.id.training);
         training.setOnClickListener(ClickListener);
+        Button hof = (Button) findViewById(R.id.hof);
+        hof.setOnClickListener(ClickListener);
         Button endgame = (Button) findViewById(R.id.endgame);
         endgame.setOnClickListener(ClickListener);
     }
@@ -58,6 +60,11 @@ public class Menu extends Activity {
 		    	intent.putExtra("omt", false);
 		    	startActivity(intent);
 			break;
+			case R.id.hof:	
+		    	intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.Hof");
+		    	startActivity(intent);
+
+	    	break;
 			case R.id.endgame:	
 		    	moveTaskToBack(true);
 
