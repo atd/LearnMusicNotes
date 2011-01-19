@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background_menu"
+    android:background="@drawable/background_main"
     >
 	<TextView  
 		android:id="@+id/fila1"
@@ -13,6 +13,7 @@
 	    android:paddingTop="10dp"
 	    android:paddingBottom="10dp"
 	    android:gravity="center_horizontal"
+	    android:textSize="30dp"
 	    android:textStyle="bold"
 	    android:textColor="#000000"
     />
@@ -21,6 +22,8 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/mintest"
+		android:textSize="20dp"
+	    android:textStyle="bold"
 		android:layout_below="@+id/fila1"
 		android:background="@drawable/custom_button"
 		android:layout_margin="3dp"	
@@ -30,6 +33,8 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/training"
+		android:textSize="20dp"
+	    android:textStyle="bold"
 		android:layout_below="@+id/mintest"
 		android:background="@drawable/custom_button"
 		android:layout_margin="3dp"	
@@ -39,9 +44,14 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/hof"
+		android:textSize="20dp"
+	    android:textStyle="bold"
 		android:layout_below="@+id/training"
+		android:layout_marginTop="15dp"
+		android:layout_marginRight="3dp"
+		android:layout_marginLeft="3dp"
 		android:background="@drawable/custom_button"
-		android:layout_margin="3dp"	
+		
 	/>	
 	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	    android:orientation="horizontal"
@@ -54,8 +64,9 @@
 			android:id="@+id/endgame"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:height="40dp"
 			android:text="@string/endgame"
+			android:textSize="20dp"
+	        android:textStyle="bold"
 			android:background="@drawable/custom_button"	
 			android:layout_margin="3dp"
 		/>	

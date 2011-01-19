@@ -122,7 +122,7 @@ public class Hof extends Activity {
 		@Override
 		public void onClick(View v) {
 			Intent intent = new Intent();
-			intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.Menu");
+			intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.MainMenu");
 			startActivity(intent);
 		}
 		

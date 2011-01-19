@@ -23,11 +23,18 @@ package net.fercanet.LNM;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.*;
+import android.widget.Button;
 
-public class Menu extends Activity {
+
+
+
+
+public class MainMenu extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,13 +50,13 @@ public class Menu extends Activity {
         endgame.setOnClickListener(ClickListener);
     }
     
-    // Click listener for the three menu buttons
+    
+    // Click listener for the four menu buttons
     OnClickListener ClickListener = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
 			Intent intent = new Intent();
-			switch (v.getId())
-			{
+			switch (v.getId()) {
 			case R.id.mintest:
 		    	intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.Game");
 		    	intent.putExtra("omt", true);
@@ -73,4 +80,48 @@ public class Menu extends Activity {
 		}
     };	
 
+    
+    // when the phone menu item is pressed show game_menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.game_menu, menu);
+        return true;
+    }
+    
+    
+    // handles the events for all the options in game_menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	Intent intent = new Intent();
+        switch (item.getItemId()) {
+        case R.id.menu_1mintest:
+        	intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.Game");
+        	intent.putExtra("omt", true);
+        	startActivity(intent);
+            return true;
+        case R.id.menu_training:
+        	intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.Game");
+        	intent.putExtra("omt", false);
+        	startActivity(intent);
+            return true;
+        case R.id.menu_hof:	
+        	intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.Hof");
+        	startActivity(intent);
+        	return true;
+        case R.id.menu_settings:	
+        	intent.setClassName("net.fercanet.LNM", "net.fercanet.LNM.Settings");
+        	startActivity(intent);
+        	return true;
+        case R.id.menu_Quit:	
+        	moveTaskToBack(true);
+        	return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
+    
+
+    
+    
 }

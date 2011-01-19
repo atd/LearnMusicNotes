@@ -6,11 +6,24 @@
 
     android:background="@drawable/background_hof"
     >
+    <TextView  
+		android:id="@+id/hoftitle"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="@string/hof"
+	    android:paddingTop="10dp"
+	    android:paddingBottom="10dp"
+	    android:gravity="center_horizontal"
+	    android:textSize="30dp"
+	    android:textStyle="bold"
+	    android:textColor="#000000"
+    />
 	<ScrollView 
 	    android:orientation="horizontal"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_centerHorizontal="true"
+	    android:layout_below="@+id/hoftitle"
     >
     	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     		android:id="@+id/hoftable"
@@ -53,8 +66,9 @@
 			android:id="@+id/exithof"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:height="40dp"
-			android:text="@string/quit"
+			android:text="@string/back"
+			android:textSize="20dp"
+	        android:textStyle="bold"
 			android:background="@drawable/custom_button"	
 			android:layout_margin="3dp"
 		/>	
