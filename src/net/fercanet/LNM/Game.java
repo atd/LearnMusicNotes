@@ -37,6 +37,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.*;
@@ -252,9 +253,12 @@ public class Game extends Activity {
 				}
 				else showTrainingEndDialog();
 			break;
-			default:	
+			default:
 				Button bt = (Button) v;				
 			    String bttext = String.valueOf(bt.getTag());
+			    
+			    Player.play(getBaseContext(), bttext, notes[prevnotenum]);
+			    
 			    if ((notes[prevnotenum].equals(bttext+"_0")) || (notes[prevnotenum].equals(bttext+"_1")) || (notes[prevnotenum].equals(bttext+"_2"))){
 					correct++;
 					showNextNote();
